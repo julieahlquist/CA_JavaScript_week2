@@ -33,3 +33,6 @@ a Promise, which is advantage is that its 'safer'. An asynchronous
 function can be paused by await, so that the promise is returned
 when whatever the machine is running meanwhile, is completed, 
 which is favorable since it doesn't 'cost' any resources. 
+
+// NETLIFY LINK
+https://wizardly-varahamihira-1c0833.netlify.com/
