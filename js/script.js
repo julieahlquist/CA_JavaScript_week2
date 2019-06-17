@@ -1,25 +1,23 @@
-document.write("js/script.js");
+const showDate = () => {
+    let today = new Date();
 
-let date, joke;
+    let day = today.getDate();
+    let month = today.getMonth() +1;
+    let year = today.getFullYear();
 
-let array_jokes = [
-    "Can I take your temperature? You’re looking hot today.", 
-    "Are you my appendix? I have a gut feeling I should take you out.",
-    "Can I be your ophthalmologist ‘cause I can’t stop looking into your eyes.", 
-    "You’d better be a cardiologist, because something about you makes me want to give you my heart."
-];
-
-let randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
-
-let showJoke = document.getElementById('showjoke');
-displayJoke.innerHTML = randomJoke
+    let displayDate = `Today's date is ${day}/${month}-${year}`;
+    document.getElementById("putdate").innerHTML = displayDate
 }
 
-date = "Today";
+const showJoke = () => {
+    let jokes = ['I told the doctor I broke my leg in two places. He told me to quit going to those places.', 
+    'The patient has been depressed since she began seeing me in 1993.',
+    'Patient has chest pain if she lies on her left side for over a year.', 
+    'You’d better be a cardiologist, because something about you makes me want to give you my heart.'];
 
-// Code for showing today's date when pressing the first button
-const date: Date = DateUtils.overrideTimezone(someDateStringFromServer);
-
-// Code for showing a random joke picked from an array of jokes
-
-// gives a collection of elements
+    let randoJoke = jokes[Math.floor(Math.random() * jokes.length)];
+    let displayJoke = document.getElementById('printjoke');
+    displayJoke.innerHTML = randoJoke
+}
+document.getElementById("putdate").addEventListener("click", showDate);
+document.getElementById("putjoke").addEventListener("click", showJoke);
